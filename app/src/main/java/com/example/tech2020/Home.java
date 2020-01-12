@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*openGame();*/
+                openStreetDisastersShooting();
 
             }
         });
@@ -78,8 +78,8 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }*/
-    /*public void openGame() {
-        Intent intent = new Intent(this, Game.class);
+    public void openStreetDisastersShooting() {
+        Intent intent = new Intent(this, StreetDisastersShooting.class);
         startActivity(intent);
-    }*/
+    }
 }
