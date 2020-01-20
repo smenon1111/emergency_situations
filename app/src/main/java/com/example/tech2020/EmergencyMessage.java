@@ -50,7 +50,7 @@ public class EmergencyMessage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent smsIntent = new Intent(Intent.ACTION_SENDTO,
-                        Uri.parse("sms:5109538121"));
+                        Uri.parse("sms:5102837722"));
                 smsIntent.putExtra("sms_body", "Hello");
                 startActivity(smsIntent);
 

@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".Info"></activity>
         <activity android:name=".StreetDisastersShooting"></activity>
+        <activity android:name=".EmergencyMessage"></activity>
 
 
 

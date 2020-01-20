@@ -12,6 +12,7 @@
     <string name="levelNumberHome">Level 1 : Fire at Home</string>
     <string name="categoryHome">Natural Disasters</string>
     <string name="playText">P L A Y</string>
+    <string name="EmergencyMessage">Emergency Message</string>
 
     <string name="CPRtext">CPR</string>
     <string name="strokeText">Stroke</string>
