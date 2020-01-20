@@ -12,4 +12,36 @@
     <string name="levelNumberHome">Level 1 : Fire at Home</string>
     <string name="categoryHome">Natural Disasters</string>
     <string name="playText">P L A Y</string>
+
+    <string name="Q1">You hear gunshots and see a shooter, what should you do?</string>
+    <string name="Q1_A1">Run and Escape</string>
+    <string name="Q1_A2">Grab your phone and other belongings</string>
+    <string name="Q1_A3">Call 911</string>
+    <string name="Q1_A4">Hide behind other people</string>
+
+    <string name="Q2">You start running and realize that there are no exits near you, what should you do?</string>
+    <string name="Q2_A1">Jump in front of the shooter to startle them</string>
+    <string name="Q2_A2">Maintain eye-contact with the shooter</string>
+    <string name="Q2_A3">Hide out of the shooter\'s view</string>
+    <string name="Q2_A4">Try to find your friends or another group of people</string>
+
+    <string name="Q3">The shooter is coming towards you and you can not escape, what should you do?</string>
+    <string name="Q3_A1">Scream</string>
+    <string name="Q3_A2">Stay still</string>
+    <string name="Q3_A3">Fight the shooter aggressively</string>
+    <string name="Q3_A4">Turn around and hope you are not seen</string>
+
+    <string name="Q4">The shooter falls to the ground, what should you do?</string>
+    <string name="Q4_A1">Run from the shooter and call 911</string>
+    <string name="Q4_A2">Post the story on social media</string>
+    <string name="Q4_A3">Run from the shooter and call your family</string>
+    <string name="Q4_A4">Call your best friend</string>
+
+    <string name="S1_End">Oh no! Wrong answer.</string>
+    <string name="S1_Congrats">Congratulations! You have finished this training video!</string>
+    <string name="Blank"> </string>
+
+
+
+
 </resources>
