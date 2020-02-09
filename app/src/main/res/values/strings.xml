@@ -13,6 +13,7 @@
     <string name="categoryHome">Natural Disasters</string>
     <string name="playText">P L A Y</string>
     <string name="EmergencyMessage">Emergency Message</string>
+    <string name="AppName">Auxilium</string>
 
     <string name="CPRtext">CPR</string>
     <string name="strokeText">Stroke</string>
@@ -52,7 +53,7 @@
     <string name = "title_Drowning">What To Do If Someone Has Drowned:</string>
     <string name = "subtitle_Drowning">(is out of the water but unconscious)</string>
     <string name = "step1_Drowning">1. Try to wake the casualty. Give them a good shake, or even pinch their earlobe. If they don’t show any signs of consciousness…</string>
-    <string name = "step2_Drowning">2. Lie them on their back and tilt their chin and head backwards to help clear their airway. This could be enough to get them to start breathing. Check if they’re breathing by leaning over them and placing your cheek near their mouth. LOOK along their chest as you do this to see if their chest is rising and falling, FEEL for breath on your cheek and LISTEN for breathing sounds. If there is no sign of breath then you should…</string>
+    <string name = "step2_Drowning">2. Lie them on t   heir back and tilt their chin and head backwards to help clear their airway. This could be enough to get them to start breathing. Check if they’re breathing by leaning over them and placing your cheek near their mouth. LOOK along their chest as you do this to see if their chest is rising and falling, FEEL for breath on your cheek and LISTEN for breathing sounds. If there is no sign of breath then you should…</string>
     <string name = "step3_Drowning">3. Give them 5 rescue breaths. Pinch their nose and keep their head tilted back as you breathe into their mouth from yours, making as good a seal as you can with your mouth over theirs. Each breath you give them should last 1 second, and make sure that you take a good deep breath yourself in between each one. These breaths will get valuable oxygen into their lungs, which is particularly important in a drowned casualty. After you’ve done 5 rescue breaths try…</string>
     <string name = "step4_Drowning">4. CPR.*see CPR page*</string>
     <string name = "step5_Drowning">5. If you are on your own, then once you’ve done 5 rescue breaths and one minute of CPR you can take the time to call the emergency services. Hopefully you will have helped get some oxygen to their brain. But as soon as you have called for help, then continue:</string>
