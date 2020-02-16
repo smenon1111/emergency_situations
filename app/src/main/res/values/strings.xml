@@ -14,12 +14,14 @@
     <string name="playText">P L A Y</string>
     <string name="EmergencyMessage">Emergency Message</string>
     <string name="AppName">Auxilium</string>
+    <string name="iAmSafe">I Am Safe</string>
 
     <string name="CPRtext">CPR</string>
     <string name="strokeText">Stroke</string>
     <string name="drowningText">Drowning</string>
     <string name="chokingText">Choking</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hello_world">hello world</string>
 
     Info Page: Strings
 
