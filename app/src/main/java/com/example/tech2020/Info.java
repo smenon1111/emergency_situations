@@ -152,7 +152,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 3:
                 return "Choking";
         }
-        return null;
-    }
+    return null;}
 }
 }

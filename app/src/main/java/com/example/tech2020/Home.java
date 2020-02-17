@@ -1,6 +1,5 @@
 package com.example.tech2020;
 
-import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
@@ -109,7 +108,7 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }*/
     public void openStreetDisastersShooting() {
-        Intent intent = new Intent(this, StreetDisastersShooting.class);
+        Intent intent = new Intent(this,StreetDisastersShooting.class);
         startActivity(intent);
     }
 

@@ -15,6 +15,7 @@
     <string name="EmergencyMessage">Emergency Message</string>
     <string name="AppName">Auxilium</string>
     <string name="iAmSafe">I Am Safe</string>
+    <integer name="myScore">0</integer>
 
     <string name="CPRtext">CPR</string>
     <string name="strokeText">Stroke</string>
@@ -85,9 +86,41 @@
     <string name="Q4_A3">Run from the shooter and call your family</string>
     <string name="Q4_A4">Call your best friend</string>
 
-    <string name="S1_End">Oh no! Wrong answer.</string>
-    <string name="S1_Congrats">Congratulations! You have finished this training video!</string>
+    <string name="S1_End">Good Try!</string>
+    <string name="S1_Congrats">Congratulations!</string>
+    <string name="S1_Try">Try harder.</string>
     <string name="Blank"> </string>
+
+    <string name="Q1Earthquake">You feel an earthquake, what should you do?</string>
+    <string name="Q1_A1Earthquake">Run outside</string>
+    <string name="Q1_A2Earthquake">Get under a roof</string>
+    <string name="Q1_A3Earthquake">Drop to the ground</string>
+    <string name="Q1_A4Earthquake">Panic</string>
+
+    <string name="Q2Earthquake">What should you do next?</string>
+    <string name="Q2_A1Earthquake">Cover your neck and head, and get under a table</string>
+    <string name="Q2_A2Earthquake">Call your parents</string>
+    <string name="Q2_A3Earthquake">Scream for help</string>
+    <string name="Q2_A4Earthquake">Hide under a glass table</string>
+
+    <string name="Q3Earthquake">What should you do next?</string>
+    <string name="Q3_A1Earthquake">Hold onto a sturdy object</string>
+    <string name="Q3_A2Earthquake">Run for help</string>
+    <string name="Q3_A3Earthquake">Call 911</string>
+    <string name="Q3_A4Earthquake">Get under a tree</string>
+
+    <string name="Q4Earthquake">The earthquake has stopped, what should you do?</string>
+    <string name="Q4_A1Earthquake">Scream “Yay”</string>
+    <string name="Q4_A2Earthquake">Post the story on social media</string>
+    <string name="Q4_A3Earthquake">Call 911</string>
+    <string name="Q4_A4Earthquake">Check for injuries</string>
+
+    <string name="Q5Earthquake">No one is injured, what should you do?</string>
+    <string name="Q5_A1Earthquake">Call to make sure your friends and family are okay</string>
+    <string name="Q5_A2Earthquake">Carry on with your day</string>
+    <string name="Q5_A3Earthquake">Listen to a radio for emergency updates and reports</string>
+    <string name="Q5_A4Earthquake">Call 911</string>
+
 
 
 

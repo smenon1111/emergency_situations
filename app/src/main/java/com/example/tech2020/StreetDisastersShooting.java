@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
+
+import java.util.ArrayList;
 
 
 public class StreetDisastersShooting extends AppCompatActivity {
@@ -21,14 +24,16 @@ public class StreetDisastersShooting extends AppCompatActivity {
     private Button mThirdButton;
     private Button mFourthButton;
     private int mQuizIndex = 1;
-    private TextView mEnd;
+    public int myScore = 0;
+    public TextView mEnd;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.streetdisasters_shooting);
         VideoView view1 = (VideoView)findViewById(R.id.VideoView);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.demoptone;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q1;
         mc = new MediaController(this);
         view1.setMediaController(mc);
         view1.requestFocus();
@@ -41,14 +46,17 @@ public class StreetDisastersShooting extends AppCompatActivity {
         mThirdButton = (Button) findViewById(R.id.thirdbutton);
         mFourthButton = (Button) findViewById(R.id.fourthbutton);
         mEnd = (TextView) findViewById(R.id.textView);
+        final TextView mMyFinalScore = findViewById(R.id.mMyFinalScore);
+
 
         //FIRST BUTTON
         mFirstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mQuizIndex == 1) {
+                    //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.demopttwo;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q2;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
@@ -58,36 +66,32 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q2_A2);
                     mThirdButton.setText(R.string.Q2_A3);
                     mFourthButton.setText(R.string.Q2_A4);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    coinsAdded.show();
                     mQuizIndex = 2;
+                    myScore = myScore + 10;
+
+
                 } else if (mQuizIndex == 2) {
-                    VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
-                    mEnd.setText(R.string.S1_End);
+                    //Wrong Answer
+                    mEnd.setText(R.string.S1_Congrats );
+                    mMyFinalScore.setText(String.format("%d",myScore,"/ 40 points"));
+                    openRewardPage();
                     mQuizIndex = 5;
                 } else if (mQuizIndex == 3) {
-                    VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
-                    mEnd.setText(R.string.S1_End);
+                    //Wrong Answer
+                   openRewardPage();
                     mQuizIndex = 5;
                 } else if (mQuizIndex == 4) {
+                    //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
-                    mEnd.setText(R.string.S1_Congrats);
+                    myScore = myScore + 10;
+                    mEnd.setText(R.string.S1_Congrats );
+                    mMyFinalScore.setText(String.format("%d",myScore,"/ 40 points"));
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    coinsAdded.show();
+                    mQuizIndex = 5 ;
+                    openRewardPage();
                 }
             }
         });
@@ -97,26 +101,21 @@ public class StreetDisastersShooting extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mQuizIndex == 1) {
+                //Wrong Answer
                 VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                view1.setVisibility(View.GONE);
-                mFirstButton.setVisibility(View.GONE);
-                mSecondButton.setVisibility(View.GONE);
-                mThirdButton.setVisibility(View.GONE);
-                mFourthButton.setVisibility(View.GONE);
-                mQuestion.setVisibility(View.GONE);
-                mEnd.setText(R.string.S1_End);
+                openRewardPage();
+                mEnd.setText(R.string.S1_Try);
+                mMyFinalScore.setText(String.format("%d",myScore, "/ 40 points"));
                 mQuizIndex = 5;
             } else if (mQuizIndex == 2) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
+                    openRewardPage();
                     mEnd.setText(R.string.S1_End);
+                    mMyFinalScore.setText(String.format("%d",myScore,  "/ 40 points"));
                     mQuizIndex = 5;
                 } else if (mQuizIndex == 3) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
                     view1.setVisibility(View.GONE);
                     mFirstButton.setVisibility(View.GONE);
@@ -125,16 +124,14 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mFourthButton.setVisibility(View.GONE);
                     mQuestion.setVisibility(View.GONE);
                     mEnd.setText(R.string.S1_End);
+                    mMyFinalScore.setText(String.format("%d",myScore,  "/ 40 points"));
                     mQuizIndex = 5;
                 } else if (mQuizIndex == 4) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
+                   openRewardPage();
                     mEnd.setText(R.string.S1_End);
+                    mMyFinalScore.setText(String.format("%d",myScore,  "/ 40 points"));
                     mQuizIndex = 5;
                 }
                 }
@@ -145,18 +142,17 @@ public class StreetDisastersShooting extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mQuizIndex == 1) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
+                   openRewardPage();
                     mEnd.setText(R.string.S1_End);
+                    mMyFinalScore.setText(String.format("%d",myScore));
                     mQuizIndex = 5;
+                    myScore = myScore + 0;
                 } else if (mQuizIndex == 2) {
+                    //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.demoptthree;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q3;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
@@ -166,10 +162,14 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q3_A2);
                     mThirdButton.setText(R.string.Q3_A3);
                     mFourthButton.setText(R.string.Q3_A4);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    coinsAdded.show();
                     mQuizIndex = 3;
+                    myScore = myScore + 10;
                 } else if (mQuizIndex == 3) {
+                    //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.demoptfour;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q4;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
@@ -179,16 +179,18 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q4_A2);
                     mThirdButton.setText(R.string.Q4_A3);
                     mFourthButton.setText(R.string.Q4_A4);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 coins", Toast.LENGTH_LONG);
+                    coinsAdded.show();
                     mQuizIndex = 4;
+                    myScore = myScore + 10;
+
                 } else if (mQuizIndex == 4) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    view1.setVisibility(View.GONE);
-                    mFirstButton.setVisibility(View.GONE);
-                    mSecondButton.setVisibility(View.GONE);
-                    mThirdButton.setVisibility(View.GONE);
-                    mFourthButton.setVisibility(View.GONE);
-                    mQuestion.setVisibility(View.GONE);
+                    openRewardPage();
+                    myScore = myScore + 0;
                     mEnd.setText(R.string.S1_End);
+                    mMyFinalScore.setText(String.format("%d",myScore));
                     mQuizIndex = 5;
                 }
 
@@ -201,6 +203,7 @@ public class StreetDisastersShooting extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mQuizIndex == 1) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
                     view1.setVisibility(View.GONE);
                     mFirstButton.setVisibility(View.GONE);
@@ -208,9 +211,12 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mThirdButton.setVisibility(View.GONE);
                     mFourthButton.setVisibility(View.GONE);
                     mQuestion.setVisibility(View.GONE);
-                    mEnd.setText(R.string.S1_End);
+                    mEnd.setText(R.string.S1_End );
                     mQuizIndex = 5;
+                    myScore = myScore + 0;
+                    mMyFinalScore.setText(String.format("%d",myScore));
                 } else if (mQuizIndex == 2) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
                     view1.setVisibility(View.GONE);
                     mFirstButton.setVisibility(View.GONE);
@@ -220,7 +226,10 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mQuestion.setVisibility(View.GONE);
                     mEnd.setText(R.string.S1_End);
                     mQuizIndex = 5;
+                    myScore = myScore + 0;
+                    mMyFinalScore.setText(String.format("%d",myScore));
                 } else if (mQuizIndex == 3) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
                     view1.setVisibility(View.GONE);
                     mFirstButton.setVisibility(View.GONE);
@@ -230,7 +239,10 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mQuestion.setVisibility(View.GONE);
                     mEnd.setText(R.string.S1_End);
                     mQuizIndex = 5;
+                    myScore = myScore + 0;
+                    mMyFinalScore.setText(String.format("%d",myScore));
                 } else if (mQuizIndex == 4) {
+                    //Wrong Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
                     view1.setVisibility(View.GONE);
                     mFirstButton.setVisibility(View.GONE);
@@ -240,15 +252,17 @@ public class StreetDisastersShooting extends AppCompatActivity {
                     mQuestion.setVisibility(View.GONE);
                     mEnd.setText(R.string.S1_End);
                     mQuizIndex = 5;
+                    myScore = myScore + 0;
+                    mMyFinalScore.setText(String.format("%d",myScore));
                 }
 
             }
         });
+    }
 
-
-
-
-
+    public void openRewardPage() {
+        Intent intent = new Intent(this, Reward.class);
+        startActivity(intent);
     }
 
 

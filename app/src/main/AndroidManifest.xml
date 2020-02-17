@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".Info"></activity>
         <activity android:name=".StreetDisastersShooting"></activity>
+        <activity android:name=".Earthquake"></activity>
+        <activity android:name=".Reward"></activity>
 
 
     </application>
