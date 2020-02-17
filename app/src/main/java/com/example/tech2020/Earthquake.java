@@ -28,7 +28,7 @@ public class Earthquake extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake);
         VideoView view1 = (VideoView)findViewById(R.id.VideoView);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q1;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.earthquake_q1;
         mc = new MediaController(this);
         view1.setMediaController(mc);
         view1.requestFocus();
@@ -58,7 +58,7 @@ public class Earthquake extends AppCompatActivity {
                 } else if (mQuizIndex == 2) {
                     //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q3;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.earthquake_q3;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
@@ -75,7 +75,7 @@ public class Earthquake extends AppCompatActivity {
                 } else if (mQuizIndex == 3) {
                     //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q4;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.earthquake_q4;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
@@ -155,7 +155,7 @@ public class Earthquake extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q4;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.earthquake_q2;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
@@ -227,7 +227,7 @@ public class Earthquake extends AppCompatActivity {
                 } else if (mQuizIndex == 4) {
                     //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-                    String path = "android.resource://" + getPackageName() + "/" + R.raw.shooting_q4;
+                    String path = "android.resource://" + getPackageName() + "/" + R.raw.earthquake_q5;
                     view1.setMediaController(mc);
                     view1.requestFocus();
                     view1.setVideoURI(Uri.parse(path));
