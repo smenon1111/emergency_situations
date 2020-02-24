@@ -27,6 +27,7 @@ public class Home extends AppCompatActivity {
         Button playButton = findViewById(R.id.buttonPlay);
         Button emergencyMessageButton = findViewById(R.id.buttonEmergencyMessage);
         Button iAmSafe = findViewById(R.id.iAmSafe);
+        Button Earthquake = findViewById(R.id.buttonEarthquake);
 
         //TODO:  LAYA :change openLevels(); to open{insert your page name for levels here}();
         //TODO: ANVIKA: change openProfile(); to open{insert your page name for profile here}();
@@ -91,6 +92,15 @@ public class Home extends AppCompatActivity {
 
             }
         });
+
+        Earthquake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openEarthquake();
+
+            }
+        });
     }
 
     //TODO: same as before change yours to open{your name as you put before}(); and change Levels.class/Profile.class/Game.class to what you put as your java code page
@@ -109,6 +119,11 @@ public class Home extends AppCompatActivity {
     }*/
     public void openStreetDisastersShooting() {
         Intent intent = new Intent(this,StreetDisastersShooting.class);
+        startActivity(intent);
+    }
+
+    public void openEarthquake() {
+        Intent intent = new Intent(this,Earthquake.class);
         startActivity(intent);
     }
 

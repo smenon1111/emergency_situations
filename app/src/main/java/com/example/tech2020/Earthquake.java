@@ -54,7 +54,6 @@ public class Earthquake extends AppCompatActivity {
                     mEnd.setText(R.string.S1_Try);
                     mMyFinalScore.setText(String.format("%d",myScore,  "/ 40 points"));
                     mQuizIndex = 6;
-
                 } else if (mQuizIndex == 2) {
                     //Correct Answer
                     VideoView view1 = (VideoView) findViewById(R.id.VideoView);
