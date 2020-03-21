@@ -36,7 +36,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class Info extends AppCompatActivity {
+public class Info extends Fragment {
 
 /**
  * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -48,27 +48,28 @@ public class Info extends AppCompatActivity {
  */
 private SectionsPagerAdapter mSectionsPagerAdapter;
 
+
 /**
  * The {@link ViewPager} that will host the section contents.
  */
 private ViewPager mViewPager;
 
 @Override
-protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.info);
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                         Bundle savedInstanceState) {
+    View infoView = inflater.inflate(R.layout.info, container, false);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) infoView.findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = (ViewPager) infoView.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) infoView.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
 @Override
 public void onClick(View view) {
@@ -77,15 +78,16 @@ public void onClick(View view) {
         }
         });
 
-        }
+        return infoView;
+}
 
 
-@Override
-public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-        }
+//@Override
+//public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//        }
 
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {
