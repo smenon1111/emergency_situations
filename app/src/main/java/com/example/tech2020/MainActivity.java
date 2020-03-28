@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_info:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new Info()).commit();
+                        new TabFragment()).commit();
                 break;
             case R.id.nav_profile:
                 Log.i("Processed", "nav_profile");

@@ -40,7 +40,7 @@ public class View_Profile extends AppCompatActivity {
 
         results = GetProfiles();
 
-        if (results.moveToFirst()){
+        if (results.moveToLast()){
             c1name.setText(results.getString(6));
             c1no.setText(results.getString(7));
             c2name.setText(results.getString(8));
