@@ -1,6 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/titleGood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleBad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitleAnswer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/YourAnswerText"
+        app:layout_constraintBottom_toTopOf="@+id/Answer1"
+        app:layout_constraintEnd_toStartOf="@+id/Result1"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/subtitleQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/titleGood" />
+
+    <TextView
+        android:id="@+id/Answer1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Answer2"
+        app:layout_constraintEnd_toStartOf="@+id/Result2"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/Question1"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleAnswer" />
+
+    <TextView
+        android:id="@+id/Answer2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Answer3"
+        app:layout_constraintEnd_toStartOf="@+id/Result3"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/Question2"
+        app:layout_constraintTop_toBottomOf="@+id/Answer1" />
+
+
+    <TextView
+        android:id="@+id/Answer3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/Answer4"
+        app:layout_constraintEnd_toStartOf="@+id/Result4"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/Question3"
+        app:layout_constraintTop_toBottomOf="@+id/Answer2" />
+
+    <TextView
+        android:id="@+id/Answer4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/Answer5"
+        app:layout_constraintEnd_toStartOf="@+id/Result5"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/Question4"
+        app:layout_constraintTop_toBottomOf="@+id/Answer3" />
+
+
+    <TextView
+        android:id="@+id/Answer5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Result5"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toEndOf="@+id/Question5"
+        app:layout_constraintTop_toBottomOf="@+id/Answer4" />
+
+    <TextView
+        android:id="@+id/subtitleQuestion"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/QuestionText"
+        app:layout_constraintBottom_toTopOf="@+id/Question1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleGood" />
+
+    <TextView
+        android:id="@+id/Question1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Question2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleQuestion" />
+
+    <TextView
+        android:id="@+id/Question2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Question3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question1" />
+
+
+    <TextView
+        android:id="@+id/Question3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/Question4"
+        app:layout_constraintEnd_toStartOf="@+id/Answer3"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question2" />
+
+    <TextView
+        android:id="@+id/Question4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/Question5"
+        app:layout_constraintEnd_toStartOf="@+id/Answer4"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
+
+    <TextView
+        android:id="@+id/Question5"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Answer5"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question4" />
+
+    <TextView
+        android:id="@+id/Result1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CorrectIncorrectText"
+        app:layout_constraintBottom_toTopOf="@+id/Result2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/subtitleAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/titleGood" />
+
+    <TextView
+        android:id="@+id/Result2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Result3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/Answer1"
+        app:layout_constraintTop_toBottomOf="@+id/Result1" />
+
+    <TextView
+        android:id="@+id/Result3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Result4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Answer2"
+        app:layout_constraintTop_toBottomOf="@+id/Result2" />
+
+    <TextView
+        android:id="@+id/Result4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/Result5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Answer3"
+        app:layout_constraintTop_toBottomOf="@+id/Result3" />
+
+    <TextView
+        android:id="@+id/Result5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/Result6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Answer4"
+        app:layout_constraintTop_toBottomOf="@+id/Result4" />
+
+    <TextView
+        android:id="@+id/Result6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Answer5"
+        app:layout_constraintTop_toBottomOf="@+id/Result5" />
+
+    <TextView
+        android:id="@+id/MyFinalScore"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/homeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Answer5" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MyFinalScore"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="677dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

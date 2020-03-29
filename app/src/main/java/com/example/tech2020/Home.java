@@ -1,32 +1,43 @@
 package com.example.tech2020;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Home extends AppCompatActivity {
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
+
+
+public class Home extends Fragment {
 
     public LocationManager locationManager;
     public Location location;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+    public View onCreateView (LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState){
+
+        View homeView = inflater.inflate(R.layout.home, container, false);
 
 
-        Button levelsButton = findViewById(R.id.buttonLevels);
-        Button infoButton = findViewById(R.id.buttonInfo);
-        Button profileButton = findViewById(R.id.buttonProfile);
-        Button playButton = findViewById(R.id.buttonPlay);
-        Button emergencyMessageButton = findViewById(R.id.buttonEmergencyMessage);
-        Button iAmSafe = findViewById(R.id.iAmSafe);
+
+        Button levelsButton = homeView.findViewById(R.id.buttonLevels);
+        Button infoButton = homeView.findViewById(R.id.buttonInfo);
+        Button profileButton = homeView.findViewById(R.id.buttonProfile);
+        Button playButton = homeView.findViewById(R.id.buttonPlay);
+        Button emergencyMessageButton = homeView.findViewById(R.id.buttonEmergencyMessage);
+        Button iAmSafe = homeView.findViewById(R.id.iAmSafe);
 
         //TODO:  LAYA :change openLevels(); to open{insert your page name for levels here}();
         //TODO: ANVIKA: change openProfile(); to open{insert your page name for profile here}();
@@ -37,9 +48,8 @@ public class Home extends AppCompatActivity {
         emergencyMessageButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
             sendEmergencyMessage();
-            Toast messageSentToast = Toast.makeText(getApplicationContext(),"Emergency Message Sent", Toast.LENGTH_SHORT);
+            Toast messageSentToast = Toast.makeText(getActivity().getApplicationContext(),"Emergency Message Sent", Toast.LENGTH_SHORT);
             messageSentToast.show();
         }
         });
@@ -47,9 +57,8 @@ public class Home extends AppCompatActivity {
         iAmSafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 sendSafeMessage();
-                Toast messageSentToast = Toast.makeText(getApplicationContext(),"Safe Message Sent", Toast.LENGTH_SHORT);
+                Toast messageSentToast = Toast.makeText(getActivity().getApplicationContext(),"Safe Message Sent", Toast.LENGTH_SHORT);
                 messageSentToast.show();
             }
         });
@@ -59,56 +68,50 @@ public class Home extends AppCompatActivity {
         levelsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                /*openLevels();*/
-
+                openLevels();
             }
         });
 
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 openInfo();
-
             }
         });
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                /*openProfile();*/
-
+                openEmergencyPlan();
             }
         });
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 openStreetDisastersShooting();
-
             }
         });
+
+        return homeView;
     }
 
     //TODO: same as before change yours to open{your name as you put before}(); and change Levels.class/Profile.class/Game.class to what you put as your java code page
 
-    /*public void openLevels() {
-        Intent intent = new Intent(this, Levels.class);
-        startActivity(intent);
-    }*/
-    public void openInfo() {
-        Intent intent = new Intent(this, Info.class);
+    public void openLevels() {
+        Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
     }
-    /*public void openProfile() {
-        Intent intent = new Intent(this, Profile.class);
+    public void openInfo() {
+        Intent intent = new Intent(getActivity(), Earthquake.class);
         startActivity(intent);
-    }*/
+    }
+    public void openEmergencyPlan() {
+        Intent intent = new Intent(getActivity(), View_Profile.class);
+        startActivity(intent);
+    }
     public void openStreetDisastersShooting() {
-        Intent intent = new Intent(this,StreetDisastersShooting.class);
+        Intent intent = new Intent(getActivity(),StreetDisastersShooting.class);
         startActivity(intent);
     }
 
@@ -117,11 +120,22 @@ public class Home extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    public void getEmergencyLocation(){
+    public void getEmergencyLocation() {
 
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
     }
+
 
     public void sendEmergencyMessage() {
         getEmergencyLocation();

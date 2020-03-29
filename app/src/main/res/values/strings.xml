@@ -24,6 +24,11 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="hello_world">hello world</string>
 
+
+    <string name="QuestionText">Question:</string>
+    <string name="YourAnswerText">Your Answer:</string>
+    <string name="CorrectIncorrectText">Correct/Incorrect:</string>
+
     Info Page: Strings
 
     CPR Strings
@@ -121,8 +126,7 @@
     <string name="Q5_A3Earthquake">Listen to a radio for emergency updates and reports</string>
     <string name="Q5_A4Earthquake">Call 911</string>
 
-
-
-
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>

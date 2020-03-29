@@ -1,51 +1,26 @@
 package com.example.tech2020;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.TextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
-public class Info extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
-/**
- * The {@link android.support.v4.view.PagerAdapter} that will provide
- * fragments for each of the sections. We use a
- * {@link FragmentPagerAdapter} derivative, which will keep every
- * loaded fragment in memory. If this becomes too memory intensive, it
- * may be best to switch to a
- * {@link android.support.v4.app.FragmentStatePagerAdapter}.
- */
+
+
+public class Info extends Fragment {
+
+
 private SectionsPagerAdapter mSectionsPagerAdapter;
 
 /**
@@ -54,21 +29,22 @@ private SectionsPagerAdapter mSectionsPagerAdapter;
 private ViewPager mViewPager;
 
 @Override
-protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.info);
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                         Bundle savedInstanceState) {
+    View infoView = inflater.inflate(R.layout.info, container, false);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        Toolbar toolbar = (Toolbar) infoView.findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = (ViewPager) infoView.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) infoView.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
 @Override
 public void onClick(View view) {
@@ -77,15 +53,16 @@ public void onClick(View view) {
         }
         });
 
-        }
+        return infoView;
+}
 
-
+/*
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-        }
+        }*/
 
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {
@@ -138,7 +115,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         // Show 4 total pages.
         return 4;
-    }
+        }
 
     @Override
     public CharSequence getPageTitle (int position) {
