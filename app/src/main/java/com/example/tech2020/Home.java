@@ -103,7 +103,7 @@ public class Home extends Fragment {
         startActivity(intent);
     }
     public void openInfo() {
-        Intent intent = new Intent(getActivity(), Info.class);
+        Intent intent = new Intent(getActivity(), Earthquake.class);
         startActivity(intent);
     }
     public void openEmergencyPlan() {
