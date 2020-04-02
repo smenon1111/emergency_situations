@@ -49,7 +49,7 @@ public class Hamburger extends AppCompatActivity implements NavigationView.OnNav
                 break;
             case R.id.nav_info:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new Info()).commit();
+                        new TabFragment()).commit();
                 break;
             case R.id.nav_profile:
                 Log.i("Processed", "nav_profile");

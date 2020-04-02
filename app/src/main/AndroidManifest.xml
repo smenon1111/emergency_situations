@@ -26,7 +26,8 @@
         <activity android:name=".Earthquake"/>
         <activity android:name=".Reward"/>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Home"/>
+        <activity android:name=".Home"
+        android:label="Auxillium"/>
         <activity android:name=".View_Profile" />
         <activity android:name=".User_Registration" />
 
