@@ -1,4 +1,4 @@
-package com.viewpager2example;
+package com.example.tech2020;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

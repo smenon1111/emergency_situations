@@ -37,6 +37,7 @@ public class Home extends Fragment {
         Button playButton = homeView.findViewById(R.id.buttonPlay);
         Button emergencyMessageButton = homeView.findViewById(R.id.buttonEmergencyMessage);
         Button iAmSafe = homeView.findViewById(R.id.iAmSafe);
+        Button earthquakeButton = homeView.findViewById(R.id.buttonEarthquake);
 
         //TODO:  LAYA :change openLevels(); to open{insert your page name for levels here}();
         //TODO: ANVIKA: change openProfile(); to open{insert your page name for profile here}();
@@ -62,7 +63,13 @@ public class Home extends Fragment {
             }
         });
 
+        levelsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLevels();
 
+            }
+        });
 
         levelsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +102,7 @@ public class Home extends Fragment {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
     }
-    public void openInfo() {
+    public void openEarthquake() {
         Intent intent = new Intent(getActivity(), Earthquake.class);
         startActivity(intent);
     }

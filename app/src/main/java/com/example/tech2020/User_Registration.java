@@ -4,23 +4,14 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
->>>>>>> origin/master
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-<<<<<<< HEAD
 import androidx.fragment.app.Fragment;
 
-=======
->>>>>>> origin/master
 
 public class User_Registration extends Fragment {
 

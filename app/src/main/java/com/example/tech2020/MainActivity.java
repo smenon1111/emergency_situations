@@ -2,8 +2,6 @@ package com.example.tech2020;
 
 import android.os.Bundle;
 
-import com.viewpager2example.ViewPagerAdapter;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
