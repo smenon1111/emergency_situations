@@ -29,6 +29,7 @@ public class Earthquake extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake);
+
         ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.earthquake_q1);
 
         mQuestion = (TextView) findViewById(R.id.question);
@@ -233,7 +234,6 @@ public class Earthquake extends AppCompatActivity {
                     results [3][1]= mFourthButton.getText().toString();
                     results [3][2]= "Correct";
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.earthquake_q5);
-
                     mQuestion.setText(R.string.Q5Earthquake);
                     mFirstButton.setText(R.string.Q5_A1Earthquake);
                     mSecondButton.setText(R.string.Q5_A2Earthquake);

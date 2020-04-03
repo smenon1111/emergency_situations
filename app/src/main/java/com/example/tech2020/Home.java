@@ -33,7 +33,6 @@ public class Home extends Fragment {
 
 
         Button levelsButton = homeView.findViewById(R.id.buttonLevels);
-        Button infoButton = homeView.findViewById(R.id.buttonInfo);
         Button profileButton = homeView.findViewById(R.id.buttonProfile);
         Button playButton = homeView.findViewById(R.id.buttonPlay);
         Button emergencyMessageButton = homeView.findViewById(R.id.buttonEmergencyMessage);
@@ -72,12 +71,6 @@ public class Home extends Fragment {
             }
         });
 
-        infoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openInfo();
-            }
-        });
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override

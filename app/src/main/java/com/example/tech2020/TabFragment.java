@@ -2,15 +2,24 @@ package com.example.tech2020;
 
 
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+>>>>>>> origin/master
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+<<<<<<< HEAD
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+=======
+>>>>>>> origin/master
 
 /**
  * A simple {@link Fragment} subclass.

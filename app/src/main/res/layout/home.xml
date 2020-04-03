@@ -8,20 +8,6 @@
 
     >
 
-    <Button
-        android:id="@+id/buttonInfo"
-        android:layout_width="109dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/infoButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonProfile"
-        app:layout_constraintStart_toEndOf="@+id/buttonLevels"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
 
     <Button
         android:id="@+id/buttonLevels"
@@ -36,27 +22,24 @@
         android:text="@string/levelsButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@id/buttonProfile"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <Button
         android:id="@+id/buttonProfile"
         android:layout_width="109dp"
         android:layout_height="61dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/profileButton"
+        android:text="Emergency Plan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonInfo"
         app:layout_constraintTop_toBottomOf="@+id/iAmSafe"
-        app:layout_constraintVertical_bias="0.884" />
+        app:layout_constraintVertical_bias="0.416" />
 
     <Button
         android:id="@+id/buttonPlay"
@@ -64,17 +47,14 @@
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="320dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/playsymbol"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/playText"
@@ -88,7 +68,6 @@
         android:fontFamily="sans-serif-black"
         android:text="@string/playText"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlay" />
@@ -131,12 +110,12 @@
         android:id="@+id/buttonEmergencyMessage"
         android:layout_width="113dp"
         android:layout_height="63dp"
+        android:layout_marginTop="12dp"
         android:text="@string/EmergencyMessage"
-        app:layout_constraintBottom_toTopOf="@id/buttonInfo"
         app:layout_constraintEnd_toStartOf="@id/iAmSafe"
+        app:layout_constraintHorizontal_bias="0.251"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/playText"
-        app:layout_constraintVertical_bias="0.764" />
+        app:layout_constraintTop_toBottomOf="@id/buttonEarthquake" />
 
     <TextView
         android:id="@+id/AppName"
@@ -145,20 +124,21 @@
         android:layout_marginTop="16dp"
         android:text="@string/AppName"
         android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/imageView"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/categoryHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AppName"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -166,11 +146,23 @@
         android:id="@+id/iAmSafe"
         android:layout_width="113dp"
         android:layout_height="63dp"
+        android:layout_marginTop="12dp"
         android:text="@string/iAmSafe"
-        app:layout_constraintBottom_toTopOf="@id/buttonInfo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonEmergencyMessage"
-        app:layout_constraintTop_toBottomOf="@+id/playText"
-        app:layout_constraintVertical_bias="0.764" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonEarthquake"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEarthquake" />
+
+    <Button
+        android:id="@+id/buttonEarthquake"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:text="@string/buttonEarthquake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.729" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,12 +20,16 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="1"
-            android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
+            android:background="#B40505"
             app:popupTheme="@style/AppTheme.PopupOverlay"
+<<<<<<< HEAD
             app:title="@string/app_name">
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+=======
+            app:title="Info">
+>>>>>>> origin/master
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/container"

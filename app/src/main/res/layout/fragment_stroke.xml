@@ -17,7 +17,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/title_Stroke"
-        android:textSize="32sp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/beginningSentence_Stroke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
