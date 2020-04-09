@@ -126,6 +126,37 @@
     <string name="Q5_A3Earthquake">Listen to a radio for emergency updates and reports</string>
     <string name="Q5_A4Earthquake">Call 911</string>
 
+    <string name="Q1Covid19">How should you sneeze?</string>
+    <string name="Q1_A1Covid19">Away from any source of water</string>
+    <string name="Q1_A2Covid19">Anywhere, it does not matter</string>
+    <string name="Q1_A3Covid19">Into your elbow, or a tissue</string>
+    <string name="Q1_A4Covid19">Into your clothes</string>
+
+    <string name="Q2Covid19">How long should you wash your hands?</string>
+    <string name="Q2_A1Covid19">10 seconds</string>
+    <string name="Q2_A2Covid19">20 seconds</string>
+    <string name="Q2_A3Covid19">30 seconds</string>
+    <string name="Q2_A4Covid19">40 seconds </string>
+
+    <string name="Q3Covid19">What part of your body should you especially not touch?</string>
+    <string name="Q3_A1Covid19">Your feet</string>
+    <string name="Q3_A2Covid19">Your hair</string>
+    <string name="Q3_A3Covid19">Your arms</string>
+    <string name="Q3_A4Covid19">Your face</string>
+
+    <string name="Q4Covid19">How far away should you stay from others?</string>
+    <string name="Q4_A1Covid19">3 feet</string>
+    <string name="Q4_A2Covid19">6 feet</string>
+    <string name="Q4_A3Covid19">10 feet</string>
+    <string name="Q4_A4Covid19">15 feet</string>
+
+    <string name="Q5Covid19">Which of these is the most true?</string>
+    <string name="Q5_A1Covid19">It is okay for you to go outside</string>
+    <string name="Q5_A2Covid19">You should stay home unless you need to go out for essentials</string>
+    <string name="Q5_A3Covid19">Do not stay inside</string>
+    <string name="Q5_A4Covid19">You must not leave your house at all for any reason</string>
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
