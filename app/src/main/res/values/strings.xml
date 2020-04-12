@@ -16,6 +16,7 @@
     <string name="AppName">Auxilium</string>
     <string name="iAmSafe">I Am Safe</string>
     <integer name="myScore">0</integer>
+    <string name="buttonEarthquake">Earthquake</string>
 
     <string name="CPRtext">CPR</string>
     <string name="strokeText">Stroke</string>
