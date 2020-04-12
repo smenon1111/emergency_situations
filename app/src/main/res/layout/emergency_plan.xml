@@ -1,70 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"><![CDATA[
     tools:context="View_Profile"
     tools:ignore="ExtraText">
 
+
+    ]]>
+
     <TextView
-        android:id="@+id/emo"
-        android:layout_width="244dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/no"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
-        android:ems="10"
+        android:layout_marginLeft="75dp"
         android:text="Emergency Plan"
-        android:textSize="25dp" />
-
-
-    <TextView
-        android:id="@+id/c1name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/emo"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:textSize="20dp"
-        android:hint="Contact 1 Name:" />
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="35dp" />
 
     <TextView
-        android:id="@+id/c1no"
+        android:id="@+id/evacuation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/c1name"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
+        android:text="Evacuation route:"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
         android:textSize="20dp"
-        android:hint="Contact 1 Phone Number" />
+        android:textColor="#B40505"/>
 
     <TextView
-        android:id="@+id/c2name"
+        android:id="@+id/evacuationlink"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="125dp"
+        android:textSize="15dp"
+        android:text="https://www.ready.gov/sites/default/files/2020-03/create-your-family-emergency-communication-plan.pdf" />
+    <TextView
+        android:id="@+id/familycom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/c1no"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
+        android:text="Family Communication"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="190dp"
         android:textSize="20dp"
-        android:hint="Contact 2 Name" />
+        android:textColor="#B40505"/>
 
     <TextView
-        android:id="@+id/c2no"
+        android:id="@+id/take"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/c2name"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
+        android:text="Things to Take"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
         android:textSize="20dp"
-        android:hint="Contact 2 Phone Number" />
+        android:textColor="#B40505"/>
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="177dp"
+    <TextView
+        android:id="@+id/takeyes"
+        android:layout_width="331dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:text="Next" />
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="270dp"
+        android:textSize="15dp"
+        android:text="- food/water
+                      - money
+                      - first aid kit" />
+    <TextView
+        android:id="@+id/mhm"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="210dp"
+        android:textSize="15dp"
+        android:text="decide how you will contact each other during an emergency" />
+
+    <TextView
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evacuation Contacts"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:textSize="20dp"
+        android:textColor="#B40505"/>
+
+    <TextView
+        android:id="@+id/intown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In-Town"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="330dp"
+        android:textSize="15dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp"
+        android:textSize="15dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="350dp"
+        android:text="Number"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/outtown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outside-Town"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="380dp"
+        android:textSize="15dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
+        android:textSize="15dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/no1"
+        android:layout_width="69dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="400dp"
+        android:text="Number"
+        android:textSize="15dp" />
+
+
 
 
 </RelativeLayout>

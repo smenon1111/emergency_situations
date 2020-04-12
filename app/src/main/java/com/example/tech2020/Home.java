@@ -4,6 +4,9 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -23,13 +26,17 @@ public class Home extends Fragment {
 
     public LocationManager locationManager;
     public Location location;
+    SQLiteOpenHelper openHelper;
+    public static final String TABLE_NAME = "T_Register";
+    Cursor results;
+    SQLiteDatabase db;
+
 
     @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container,
-                              Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
         View homeView = inflater.inflate(R.layout.home, container, false);
-
 
 
         Button levelsButton = homeView.findViewById(R.id.buttonLevels);
@@ -37,7 +44,6 @@ public class Home extends Fragment {
         Button playButton = homeView.findViewById(R.id.buttonPlay);
         Button emergencyMessageButton = homeView.findViewById(R.id.buttonEmergencyMessage);
         Button iAmSafe = homeView.findViewById(R.id.iAmSafe);
-        Button earthquakeButton = homeView.findViewById(R.id.buttonEarthquake);
 
         //TODO:  LAYA :change openLevels(); to open{insert your page name for levels here}();
         //TODO: ANVIKA: change openProfile(); to open{insert your page name for profile here}();
@@ -46,19 +52,19 @@ public class Home extends Fragment {
         //TODO:on your Android Manifest file, under <activity android:name=".Info"></activity add the same line of code, replacing "Info" with your activity name if it's not already there
 
         emergencyMessageButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            sendEmergencyMessage();
-            Toast messageSentToast = Toast.makeText(getActivity().getApplicationContext(),"Emergency Message Sent", Toast.LENGTH_SHORT);
-            messageSentToast.show();
-        }
+            @Override
+            public void onClick(View view) {
+                sendEmergencyMessage();
+                Toast messageSentToast = Toast.makeText(getActivity().getApplicationContext(), "Emergency Message Sent", Toast.LENGTH_SHORT);
+                messageSentToast.show();
+            }
         });
 
         iAmSafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendSafeMessage();
-                Toast messageSentToast = Toast.makeText(getActivity().getApplicationContext(),"Safe Message Sent", Toast.LENGTH_SHORT);
+                Toast messageSentToast = Toast.makeText(getActivity().getApplicationContext(), "Safe Message Sent", Toast.LENGTH_SHORT);
                 messageSentToast.show();
             }
         });
@@ -102,16 +108,15 @@ public class Home extends Fragment {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
     }
-    public void openEarthquake() {
-        Intent intent = new Intent(getActivity(), Earthquake.class);
-        startActivity(intent);
-    }
+
+
     public void openEmergencyPlan() {
         Intent intent = new Intent(getActivity(), View_Profile.class);
         startActivity(intent);
     }
+
     public void openStreetDisastersShooting() {
-        Intent intent = new Intent(getActivity(),StreetDisastersShooting.class);
+        Intent intent = new Intent(getActivity(), StreetDisastersShooting.class);
         startActivity(intent);
     }
 
@@ -139,7 +144,6 @@ public class Home extends Fragment {
 
     public void sendEmergencyMessage() {
         getEmergencyLocation();
-
         SmsManager sms = SmsManager.getDefault();
         StringBuffer smsBody = new StringBuffer();
         smsBody.append("Help. I am in trouble. My location is: ");
@@ -147,8 +151,11 @@ public class Home extends Fragment {
         smsBody.append(location.getLatitude());
         smsBody.append(",");
         smsBody.append(location.getLongitude());
-        sms.sendTextMessage("sms:5104493731", null,
+        sms.sendTextMessage("sms:" + GetPhoneNumber(7), null,
                 smsBody.toString(), null, null);
+        sms.sendTextMessage("sms:" + GetPhoneNumber(9), null,
+                smsBody.toString(), null, null);
+
     }
 
     public void sendSafeMessage() {
@@ -161,7 +168,19 @@ public class Home extends Fragment {
         smsBody.append(location.getLatitude());
         smsBody.append(",");
         smsBody.append(location.getLongitude());
-        sms.sendTextMessage("sms:5104493731", null,
+        sms.sendTextMessage("sms:" + GetPhoneNumber(7), null,
                 smsBody.toString(), null, null);
+        sms.sendTextMessage("sms:" + GetPhoneNumber(9), null,
+                smsBody.toString(), null, null);
+    }
+
+    public String GetPhoneNumber(int ColumnNo) {
+        openHelper = new DataBaseHelper(getActivity());
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        Cursor results = db.rawQuery("Select * from T_REGISTER", null);
+        if (results.moveToFirst()){
+            return results.getString(ColumnNo);
+        }
+        return results.getString(ColumnNo);
     }
 }
