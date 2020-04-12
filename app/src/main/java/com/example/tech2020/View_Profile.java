@@ -27,10 +27,10 @@ public class View_Profile extends AppCompatActivity {
 
     public void viewProfiles(){
 
-        c1name = (TextView) findViewById(R.id.c1name);
-        c1no = (TextView) findViewById(R.id.c1no);
-        c2name = (TextView) findViewById(R.id.c2name);
-        c2no = (TextView) findViewById(R.id.c2no);
+        c1name = (TextView) findViewById(R.id.name);
+        c1no = (TextView) findViewById(R.id.no);
+        c2name = (TextView) findViewById(R.id.name1);
+        c2no = (TextView) findViewById(R.id.no1);
 
         results = GetProfiles();
 
