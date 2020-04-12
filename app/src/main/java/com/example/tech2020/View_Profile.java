@@ -22,6 +22,7 @@ public class View_Profile extends AppCompatActivity {
 
         openHelper = new DataBaseHelper(this);
         viewProfiles();
+
     }
 
 
