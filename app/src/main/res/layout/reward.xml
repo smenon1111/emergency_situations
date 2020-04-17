@@ -24,6 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text=""
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -96,14 +98,15 @@
         app:layout_constraintStart_toEndOf="@+id/Question5"
         app:layout_constraintTop_toBottomOf="@+id/Answer4" />
 
+
     <TextView
         android:id="@+id/subtitleQuestion"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/QuestionText"
         app:layout_constraintBottom_toTopOf="@+id/Question1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintEnd_toStartOf="@id/subtitleAnswer"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleGood" />
 
@@ -113,8 +116,8 @@
         android:layout_height="wrap_content"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/Question2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintEnd_toStartOf="@id/Answer1"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtitleQuestion" />
 
@@ -124,11 +127,10 @@
         android:layout_height="wrap_content"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/Question3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintEnd_toStartOf="@id/Answer2"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Question1" />
-
 
     <TextView
         android:id="@+id/Question3"
@@ -227,7 +229,7 @@
 
     <TextView
         android:id="@+id/MyFinalScore"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/homeButton"

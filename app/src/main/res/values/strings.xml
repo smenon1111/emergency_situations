@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Emergency Situations</string>
+    <string name="app_name">Auxillium</string>
     <string name="action_settings">Settings</string>
     <string name="editText">Technovation 2020!</string>
     <string name="SophiesButton">Sophies button</string>
@@ -9,13 +9,14 @@
     <string name="settingsButton">Settings</string>
     <string name="levelsButton">Levels</string>
     <string name="infoPage">this is info page</string>
-    <string name="levelNumberHome">Level 1 : Fire at Home</string>
-    <string name="categoryHome">Natural Disasters</string>
+    <string name="levelNumberHome">Level 1: Shooting</string>
+    <string name="categoryHome">Public Disasters</string>
     <string name="playText">P L A Y</string>
     <string name="EmergencyMessage">Emergency Message</string>
     <string name="AppName">Auxilium</string>
     <string name="iAmSafe">I Am Safe</string>
     <integer name="myScore">0</integer>
+    <string name="buttonEarthquake">Earthquake</string>
 
     <string name="CPRtext">CPR</string>
     <string name="strokeText">Stroke</string>
