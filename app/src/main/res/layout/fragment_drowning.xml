@@ -10,6 +10,7 @@
         android:id="@+id/title_Drowning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/title_Drowning"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="30dp"

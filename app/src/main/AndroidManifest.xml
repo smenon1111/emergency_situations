@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".COVID19"/>
         <activity android:name=".Info"/>
         <activity android:name=".StreetDisastersShooting"/>
         <activity android:name=".Earthquake"/>

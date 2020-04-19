@@ -1,6 +1,6 @@
 package com.example.tech2020;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class COVID19 extends AppCompatActivity {
     private MediaController mc;
@@ -21,7 +22,9 @@ public class COVID19 extends AppCompatActivity {
     private int mQuizIndex = 1;
     public int myScore = 0;
 
-    String[][] results = new String[5][3];
+    String[] questions = new String[5];
+    int[] correct_incorrect = new int[5];
+
 
 
     @Override
@@ -45,37 +48,31 @@ public class COVID19 extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mFirstButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [0] = "1." + mFirstButton.getText().toString();
+                    correct_incorrect [0] = R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 2) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "2: " + mQuestion.getText().toString();
-                    results [0][1]= mFirstButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [1]= "2." +  mFirstButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 3) {
                     mQuizIndex = 6;
-                    results [0][0]= "3: " + mQuestion.getText().toString();
-                    results [0][1]= mFirstButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [2]= "3." +  mFirstButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [3][0]= "4: " + mQuestion.getText().toString();
-                    results [3][1]= mFirstButton.getText().toString();
-                    results [3][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [3]= "4." +  mFirstButton.getText().toString();
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 5){
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mFirstButton.getText().toString();
-                    results [4][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [4]= "5." +  mFirstButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
 
 
@@ -91,15 +88,13 @@ public class COVID19 extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mSecondButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [0] = "1." + mSecondButton.getText().toString();
+                    correct_incorrect [0] = R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 2) {
                     //Correct Answer
-                    results [0][0]= "2: " + mQuestion.getText().toString();
-                    results [0][1]= mThirdButton.getText().toString();
-                    results [0][2]= "Correct";
+                    questions [1]= "2." +  mSecondButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.covid19_q3);
                     mQuestion.setText(R.string.Q3Covid19);
                     mFirstButton.setText(R.string.Q3_A1Covid19);
@@ -113,15 +108,13 @@ public class COVID19 extends AppCompatActivity {
                 } else if (mQuizIndex == 3) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [2][0]= "3: " + mQuestion.getText().toString();
-                    results [2][1]= mSecondButton.getText().toString();
-                    results [2][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [2]= "3." +  mSecondButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 4) {
                     //Correct Answer
-                    results [0][0]= "4: " + mQuestion.getText().toString();
-                    results [0][1]= mThirdButton.getText().toString();
-                    results [0][2]= "Correct";
+                    questions [3]= "4." +  mSecondButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.covid19_q5);
                     mQuestion.setText(R.string.Q5Covid19);
                     mFirstButton.setText(R.string.Q5_A1Covid19);
@@ -135,11 +128,10 @@ public class COVID19 extends AppCompatActivity {
                 }else if (mQuizIndex == 5){
                     //Correct Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mThirdButton.getText().toString();
-                    results [4][2]= "Correct";
+                    questions [4]= "5." +  mSecondButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
                     myScore = myScore + 10;
-                    openRewardPage(results,myScore);
+                    openRewardPage(questions, myScore, correct_incorrect);
 
                 }
             }
@@ -151,9 +143,8 @@ public class COVID19 extends AppCompatActivity {
             public void onClick(View view) {
                 if (mQuizIndex == 1) {
                     //Correct Answer
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mThirdButton.getText().toString();
-                    results [0][2]= "Correct";
+                    questions [0]= "1." +  mThirdButton.getText().toString();
+                    correct_incorrect [0]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.covid19_q2);
                     mQuestion.setText(R.string.Q2Covid19);
                     mFirstButton.setText(R.string.Q2_A1Covid19);
@@ -166,32 +157,28 @@ public class COVID19 extends AppCompatActivity {
                     myScore = myScore + 10;
                 } else if (mQuizIndex == 2) {
                     //Wrong Answer
-                    results [1][0]= "2: " + mQuestion.getText().toString();
-                    results [1][1]= mThirdButton.getText().toString();
-                    results [1][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [1]= "2." +  mThirdButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 3) {
                     //Wrong Answer
-                    results [2][0]= "3: " + mQuestion.getText().toString();
-                    results [2][1]= mThirdButton.getText().toString();
-                    results [2][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [2]= "3." +  mThirdButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [3][0]= "4: " + mQuestion.getText().toString();
-                    results [3][1]= mThirdButton.getText().toString();
-                    results [3][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [3]= "4." +  mThirdButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 }else if (mQuizIndex == 5){
                     //Correct Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mThirdButton.getText().toString();
-                    results [4][2]= "Correct";
+                    questions [4]= "5." +  mThirdButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
                     myScore = myScore + 10;
-                    openRewardPage(results,myScore);
+                    openRewardPage(questions, myScore, correct_incorrect);
                 }
 
 
@@ -205,22 +192,19 @@ public class COVID19 extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mFourthButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [0]= "1." +  mFourthButton.getText().toString();
+                    correct_incorrect [0]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 2) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [1][0]= "2: " + mQuestion.getText().toString();
-                    results [1][1]= mFourthButton.getText().toString();
-                    results [1][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [1]= "2." +  mFourthButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 3) {
                     //Correct Answer
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mThirdButton.getText().toString();
-                    results [0][2]= "Correct";
+                    questions [2]= "3." +  mFourthButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.covid19_q4);
                     mQuestion.setText(R.string.Q4Covid19);
                     mFirstButton.setText(R.string.Q4_A1Covid19);
@@ -234,16 +218,14 @@ public class COVID19 extends AppCompatActivity {
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [2][0]= "4: " + mQuestion.getText().toString();
-                    results [2][1]= mFourthButton.getText().toString();
-                    results [2][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [3]= "4." +  mFourthButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 }else if (mQuizIndex == 5){
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mFourthButton.getText().toString();
-                    results [4][2]= "Incorrect";
+                    questions [4]= "5." +  mFourthButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
 
 
                 }
@@ -266,10 +248,9 @@ public class COVID19 extends AppCompatActivity {
    }
 
 
+    public void openRewardPage(String[] myQuestion, int myScore, int[] myAccuracy) {
 
-    public void openRewardPage(String[][] resultsReward, int myScore) {
-
-        Intent intent = Reward.makeIntent(COVID19.this, resultsReward, myScore, "COVID19");
+        Intent intent = Reward.makeIntent(COVID19.this, myQuestion, myScore,"COVID19", myAccuracy );
         startActivity(intent);
     }
 }

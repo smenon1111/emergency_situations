@@ -111,14 +111,14 @@ public class Home extends Fragment {
 
 
     public void openEmergencyPlan() {
-        Intent intent = new Intent(getActivity(), View_Profile.class);
+        Intent intent = new Intent(getActivity(), COVID19.class);
         startActivity(intent);
     }
 
     public void openStreetDisastersShooting() {
-        Intent intent = new Intent(getActivity(), StreetDisastersShooting.class);
+        Intent intent = new Intent(getActivity(), Earthquake.class);
         startActivity(intent);
-    }
+           }
 
 //    public void openEmergencyMessage() {
 //        Intent intent = new Intent(this, EmergencyMessage.class);

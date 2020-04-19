@@ -160,6 +160,17 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="buttonEarthquake">Earthquake</string>
+
+    <string name="signUp">Sign Up</string>
+    <string name="Name">Name</string>
+    <string name="Password">Password</string>
+    <string name="Username">Username</string>
+    <string name="Email">Email</string>
+    <string name="Register">Register</string>
+
+
+
+
+
 
 </resources>

@@ -22,7 +22,8 @@ public class Earthquake extends AppCompatActivity {
     private int mQuizIndex = 1;
     public int myScore = 0;
 
-    String[][] results = new String[5][3];
+    String[] questions = new String[5];
+    int[] correct_incorrect = new int[5];
 
 
     @Override
@@ -46,17 +47,15 @@ public class Earthquake extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mFirstButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [0] = "1:" + mFirstButton.getText().toString();
+                    correct_incorrect [0] = R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
 
                 } else if (mQuizIndex == 2) {
                     //Correct Answer
-                    results [1][0]= "2: " + mQuestion.getText().toString();
-                    results [1][1]= mFirstButton.getText().toString();
-                    results [1][2]= "Correct";
+                    questions [1]= "2:" +  mFirstButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.earthquake_q3);
                     mQuestion.setText(R.string.Q3Earthquake);
                     mFirstButton.setText(R.string.Q3_A1Earthquake);
@@ -69,9 +68,8 @@ public class Earthquake extends AppCompatActivity {
                     myScore = myScore + 10;
                 } else if (mQuizIndex == 3) {
                     //Correct Answer
-                    results [2][0]= "3: " + mQuestion.getText().toString();
-                    results [2][1]= mFirstButton.getText().toString();
-                    results [2][2]= "Correct";
+                    questions [2]= "3:" +  mFirstButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.earthquake_q4);
                     mQuestion.setText(R.string.Q4Earthquake);
                     mFirstButton.setText(R.string.Q4_A1Earthquake);
@@ -85,17 +83,15 @@ public class Earthquake extends AppCompatActivity {
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [3][0]= "4: " + mQuestion.getText().toString();
-                    results [3][1]= mFirstButton.getText().toString();
-                    results [3][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [3]= "4:" +  mFirstButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 5){
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mFirstButton.getText().toString();
-                    results [4][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [4]= "5:" +  mFirstButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
 
 
@@ -111,39 +107,33 @@ public class Earthquake extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mSecondButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [0] = "1:" + mSecondButton.getText().toString();
+                    correct_incorrect [0] = R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 2) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [1][0]= "2: " + mQuestion.getText().toString();
-                    results [1][1]= mSecondButton.getText().toString();
-                    results [1][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [1]= "2:" +  mSecondButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
                 } else if (mQuizIndex == 3) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [2][0]= "3: " + mQuestion.getText().toString();
-                    results [2][1]= mSecondButton.getText().toString();
-                    results [2][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [2]= "3:" +  mSecondButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [3][0]= "4: " + mQuestion.getText().toString();
-                    results [3][1]= mSecondButton.getText().toString();
-                    results [3][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [3]= "4:" +  mSecondButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.red_mark;
                 }else if (mQuizIndex == 5){
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mSecondButton.getText().toString();
-                    results [4][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [4]= "5:" +  mSecondButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
 
                 }
@@ -156,9 +146,8 @@ public class Earthquake extends AppCompatActivity {
             public void onClick(View view) {
                 if (mQuizIndex == 1) {
                     //Correct Answer
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mThirdButton.getText().toString();
-                    results [0][2]= "Correct";
+                    questions [0]= "1:" +  mThirdButton.getText().toString();
+                    correct_incorrect [0]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.earthquake_q2);
                     mQuestion.setText(R.string.Q2Earthquake);
                     mFirstButton.setText(R.string.Q2_A1Earthquake);
@@ -171,32 +160,28 @@ public class Earthquake extends AppCompatActivity {
                     myScore = myScore + 10;
                 } else if (mQuizIndex == 2) {
                     //Wrong Answer
-                    results [1][0]= "2: " + mQuestion.getText().toString();
-                    results [1][1]= mThirdButton.getText().toString();
-                    results [1][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [1]= "2:" +  mThirdButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 3) {
                     //Wrong Answer
-                    results [2][0]= "3: " + mQuestion.getText().toString();
-                    results [2][1]= mThirdButton.getText().toString();
-                    results [2][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [2]= "3:" +  mThirdButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
 
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [3][0]= "4: " + mQuestion.getText().toString();
-                    results [3][1]= mThirdButton.getText().toString();
-                    results [3][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [3]= "4:" +  mThirdButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 }else if (mQuizIndex == 5){
                     //Correct Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mThirdButton.getText().toString();
-                    results [4][2]= "Correct";
+                    questions [4]= "5:" +  mThirdButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.check_mark;
                     myScore = myScore + 10;
-                    openRewardPage(results,myScore);
+                    openRewardPage(questions, myScore, correct_incorrect);
                 }
 
 
@@ -210,29 +195,25 @@ public class Earthquake extends AppCompatActivity {
                 if (mQuizIndex == 1) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [0][0]= "1: " + mQuestion.getText().toString();
-                    results [0][1]= mFourthButton.getText().toString();
-                    results [0][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [0]= "1:" +  mFourthButton.getText().toString();
+                    correct_incorrect [0]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 2) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [1][0]= "2: " + mQuestion.getText().toString();
-                    results [1][1]= mFourthButton.getText().toString();
-                    results [1][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [1]= "2:" +  mFourthButton.getText().toString();
+                    correct_incorrect [1]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 3) {
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [2][0]= "3: " + mQuestion.getText().toString();
-                    results [2][1]= mFourthButton.getText().toString();
-                    results [2][2]= "Incorrect";
-                    openRewardPage(results, myScore);
+                    questions [2]= "3:" +  mFourthButton.getText().toString();
+                    correct_incorrect [2]= R.drawable.red_mark;
+                    openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 4) {
                     //Correct Answer
-                    results [3][0]= "4: " + mQuestion.getText().toString();
-                    results [3][1]= mFourthButton.getText().toString();
-                    results [3][2]= "Correct";
+                    questions [3]= "4:" +  mFourthButton.getText().toString();
+                    correct_incorrect [3]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.earthquake_q5);
                     mQuestion.setText(R.string.Q5Earthquake);
                     mFirstButton.setText(R.string.Q5_A1Earthquake);
@@ -246,11 +227,8 @@ public class Earthquake extends AppCompatActivity {
                 }else if (mQuizIndex == 5){
                     //Wrong Answer
                     mQuizIndex = 6;
-                    results [4][0]= "5: " + mQuestion.getText().toString();
-                    results [4][1]= mFourthButton.getText().toString();
-                    results [4][2]= "Incorrect";
-
-
+                    questions [4]= "5:" +  mFourthButton.getText().toString();
+                    correct_incorrect [4]= R.drawable.red_mark;
                 }
 
             }
@@ -262,19 +240,19 @@ public class Earthquake extends AppCompatActivity {
 
     }
 
-   public void ShowVideo (String path){
-       VideoView view1 = (VideoView) findViewById(R.id.VideoView);
-       view1.setMediaController(mc);
-       view1.requestFocus();
-       view1.setVideoURI(Uri.parse(path));
-       view1.start();
-   }
+    public void ShowVideo (String path){
+        VideoView view1 = (VideoView) findViewById(R.id.VideoView);
+        view1.setMediaController(mc);
+        view1.requestFocus();
+        view1.setVideoURI(Uri.parse(path));
+        view1.start();
+    }
 
 
 
-    public void openRewardPage(String[][] resultsReward, int myScore) {
+    public void openRewardPage(String[] myQuestion, int myScore, int[] myAccuracy) {
 
-        Intent intent = Reward.makeIntent(Earthquake.this, resultsReward, myScore, "Earthquake");
+        Intent intent = Reward.makeIntent(Earthquake.this, myQuestion, myScore,"Earthquake", myAccuracy );
         startActivity(intent);
     }
 }
