@@ -1,146 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"><![CDATA[
-    tools:context="View_Profile"
-    tools:ignore="ExtraText">
-
-
-    ]]>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
+        android:layout_marginTop="32dp"
         android:text="Emergency Plan"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
         android:textColor="#000000"
-        android:textSize="35dp" />
-
-    <TextView
-        android:id="@+id/evacuation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Evacuation route:"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
-        android:textSize="20dp"
-        android:textColor="#B40505"/>
-
-    <TextView
-        android:id="@+id/evacuationlink"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="125dp"
-        android:textSize="15dp"
-        android:text="https://www.ready.gov/sites/default/files/2020-03/create-your-family-emergency-communication-plan.pdf" />
-    <TextView
-        android:id="@+id/familycom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Family Communication"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="190dp"
-        android:textSize="20dp"
-        android:textColor="#B40505"/>
-
-    <TextView
-        android:id="@+id/take"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Things to Take"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="250dp"
-        android:textSize="20dp"
-        android:textColor="#B40505"/>
-
-    <TextView
-        android:id="@+id/takeyes"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="270dp"
-        android:textSize="15dp"
-        android:text="- food/water
-                      - money
-                      - first aid kit" />
-    <TextView
-        android:id="@+id/mhm"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="210dp"
-        android:textSize="15dp"
-        android:text="decide how you will contact each other during an emergency" />
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/contacts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="100dp"
         android:text="Evacuation Contacts"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="300dp"
+        android:textColor="#B40505"
         android:textSize="20dp"
-        android:textColor="#B40505"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/intown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
         android:text="In-Town"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="330dp"
+        android:textColor="#000000"
         android:textSize="15dp"
-        android:textColor="#000000"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contacts" />
 
-    <TextView
+    <EditText
         android:id="@+id/name"
-        android:layout_width="51dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Name"
         android:textSize="15dp"
-        android:text="Name" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intown" />
 
-    <TextView
+    <EditText
         android:id="@+id/no"
-        android:layout_width="74dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginStart="48dp"
         android:text="Number"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/outtown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="30dp"
         android:text="Outside-Town"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="380dp"
+        android:textColor="#000000"
         android:textSize="15dp"
-        android:textColor="#000000"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toEndOf="@+id/intown"
+        app:layout_constraintTop_toBottomOf="@+id/contacts" />
 
-    <TextView
+    <EditText
         android:id="@+id/name1"
-        android:layout_width="51dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:text="Name"
         android:textSize="15dp"
-        android:text="Name" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/outtown" />
+
+    <EditText
+        android:id="@+id/no1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Number"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@id/no"
+        app:layout_constraintTop_toBottomOf="@+id/name1" />
 
     <TextView
-        android:id="@+id/no1"
-        android:layout_width="69dp"
-        android:layout_height="32dp"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="400dp"
-        android:text="Number"
-        android:textSize="15dp" />
+        android:id="@+id/communicationPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="264dp"
+        android:text="Communication Plan"
+        android:textColor="#B40505"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/communicationPlanInput"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="How will you communicate?"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/communicationPlan" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/MeetingPlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="376dp"
+        android:text="Meeting Places"
+        android:textColor="#B40505"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MeetingPlacesOutofTownInput"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Out of Town"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MeetingPlacesInTownInput" />
+
+    <EditText
+        android:id="@+id/MeetingPlacesInTownInput"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="In Town"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MeetingPlaces" />
+
+    <TextView
+        android:id="@+id/EvacuationPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="548dp"
+        android:text="Evacuation Plan"
+        android:textColor="#B40505"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EvacuationPlanInput"
+        android:layout_width="326dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="How will you get to your meeting places?"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EvacuationPlan" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="125dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="64dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EvacuationPlanInput" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="125dp"
+        android:layout_height="47dp"
+        android:text="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/EvacuationPlanInput"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <TextView
+        android:id="@+id/nameID"
+        android:layout_width="61dp"
+        android:layout_height="15dp"
+        android:text=""
+        android:textColor="@color/design_default_color_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,7 +62,7 @@ public class Earthquake extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q3_A2Earthquake);
                     mThirdButton.setText(R.string.Q3_A3Earthquake);
                     mFourthButton.setText(R.string.Q3_A4Earthquake);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_SHORT);
                     coinsAdded.show();
                     mQuizIndex = 3;
                     myScore = myScore + 10;
@@ -76,7 +76,7 @@ public class Earthquake extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q4_A2Earthquake);
                     mThirdButton.setText(R.string.Q4_A3Earthquake);
                     mFourthButton.setText(R.string.Q4_A4Earthquake);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_SHORT);
                     coinsAdded.show();
                     mQuizIndex = 4;
                     myScore = myScore + 10;
@@ -154,7 +154,7 @@ public class Earthquake extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q2_A2Earthquake);
                     mThirdButton.setText(R.string.Q2_A3Earthquake);
                     mFourthButton.setText(R.string.Q2_A4Earthquake);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_SHORT);
                     coinsAdded.show();
                     mQuizIndex = 2;
                     myScore = myScore + 10;
@@ -181,6 +181,8 @@ public class Earthquake extends AppCompatActivity {
                     questions [4]= "5:" +  mThirdButton.getText().toString();
                     correct_incorrect [4]= R.drawable.check_mark;
                     myScore = myScore + 10;
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_SHORT);
+                    coinsAdded.show();
                     openRewardPage(questions, myScore, correct_incorrect);
                 }
 
@@ -220,7 +222,7 @@ public class Earthquake extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q5_A2Earthquake);
                     mThirdButton.setText(R.string.Q5_A3Earthquake);
                     mFourthButton.setText(R.string.Q5_A4Earthquake);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_SHORT);
                     coinsAdded.show();
                     mQuizIndex = 5;
                     myScore = myScore + 10;

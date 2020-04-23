@@ -12,6 +12,8 @@ import android.widget.Toast;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 public class COVID19 extends AppCompatActivity {
     private MediaController mc;
     private TextView mQuestion;
@@ -101,7 +103,7 @@ public class COVID19 extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q3_A2Covid19);
                     mThirdButton.setText(R.string.Q3_A3Covid19);
                     mFourthButton.setText(R.string.Q3_A4Covid19);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", LENGTH_LONG);
                     coinsAdded.show();
                     mQuizIndex = 3;
                     myScore = myScore + 10;
@@ -113,6 +115,7 @@ public class COVID19 extends AppCompatActivity {
                     openRewardPage(questions, myScore, correct_incorrect);
                 } else if (mQuizIndex == 4) {
                     //Correct Answer
+                    mQuizIndex = 5;
                     questions [3]= "4." +  mSecondButton.getText().toString();
                     correct_incorrect [3]= R.drawable.check_mark;
                     ShowVideo("android.resource://" + getPackageName() + "/" + R.raw.covid19_q5);
@@ -121,16 +124,17 @@ public class COVID19 extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q5_A2Covid19);
                     mThirdButton.setText(R.string.Q5_A1Covid19);
                     mFourthButton.setText(R.string.Q5_A1Covid19);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", LENGTH_LONG);
                     coinsAdded.show();
-                    mQuizIndex = 5;
                     myScore = myScore + 10;
                 }else if (mQuizIndex == 5){
                     //Correct Answer
                     mQuizIndex = 6;
                     questions [4]= "5." +  mSecondButton.getText().toString();
-                    correct_incorrect [4]= R.drawable.red_mark;
+                    correct_incorrect [4]= R.drawable.check_mark;
                     myScore = myScore + 10;
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", LENGTH_LONG);
+                    coinsAdded.show();
                     openRewardPage(questions, myScore, correct_incorrect);
 
                 }
@@ -151,7 +155,7 @@ public class COVID19 extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q2_A2Covid19);
                     mThirdButton.setText(R.string.Q2_A3Covid19);
                     mFourthButton.setText(R.string.Q2_A4Covid19);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", LENGTH_LONG);
                     coinsAdded.show();
                     mQuizIndex = 2;
                     myScore = myScore + 10;
@@ -211,9 +215,9 @@ public class COVID19 extends AppCompatActivity {
                     mSecondButton.setText(R.string.Q4_A2Covid19);
                     mThirdButton.setText(R.string.Q4_A3Covid19);
                     mFourthButton.setText(R.string.Q4_A4Covid19);
-                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
+                    Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_SHORT);
                     coinsAdded.show();
-                    mQuizIndex = 2;
+                    mQuizIndex = 4;
                     myScore = myScore + 10;
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer
