@@ -12,7 +12,7 @@
         android:layout_width="127dp"
         android:layout_height="68dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/technovation_auxilium_logo"
+        android:src="@mipmap/technovation_auxilium_logo"
         tools:ignore="ContentDescription" />
 
     <TextView
