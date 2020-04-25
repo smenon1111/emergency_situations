@@ -72,7 +72,7 @@ public class Home extends Fragment {
         levelsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLevels();
+                openCategories();
 
             }
         });
@@ -80,7 +80,7 @@ public class Home extends Fragment {
         levelsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLevels();
+                openCategories();
             }
         });
 
@@ -104,21 +104,21 @@ public class Home extends Fragment {
 
     //TODO: same as before change yours to open{your name as you put before}(); and change Levels.class/Profile.class/Game.class to what you put as your java code page
 
-    public void openLevels() {
-        Intent intent = new Intent(getActivity(), MainActivity.class);
+    public void openCategories() {
+        Intent intent = new Intent(getActivity(), CategoryActivity.class);
         startActivity(intent);
     }
 
 
     public void openEmergencyPlan() {
-        Intent intent = new Intent(getActivity(), View_Profile.class);
+        Intent intent = new Intent(getActivity(), COVID19.class);
         startActivity(intent);
     }
 
     public void openStreetDisastersShooting() {
-        Intent intent = new Intent(getActivity(), COVID19.class);
+        Intent intent = new Intent(getActivity(), Earthquake.class);
         startActivity(intent);
-           }
+    }
 
 //    public void openEmergencyMessage() {
 //        Intent intent = new Intent(this, EmergencyMessage.class);

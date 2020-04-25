@@ -1,111 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    android:background="#F1F1F1">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="#F1F1F1">
 
 
-    <Button
-        android:id="@+id/buttonLevels"
-        android:layout_width="110dp"
-        android:layout_height="60dp"
-        android:background="@color/design_default_color_error"
-        android:text="@string/levelsButton"
-        android:textColor="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonProfile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEmergencyMessage" />
+        <TextView
+            android:id="@+id/categoryHome"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/categoryHome"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/levelNumberHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
 
-    <Button
-        android:id="@+id/buttonProfile"
-        android:layout_width="110dp"
-        android:layout_height="60dp"
-        android:background="@color/design_default_color_error"
-        android:text="Emergency Plan"
-        android:textColor="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonLevels"
-        app:layout_constraintTop_toBottomOf="@+id/iAmSafe" />
+        <TextView
+            android:id="@+id/levelNumberHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/levelNumberHome"
+            android:textColor="@color/design_default_color_on_secondary"
+            app:layout_constraintBottom_toTopOf="@+id/playText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryHome"
+            app:layout_constraintVertical_bias="0.517" />
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="86dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/redplaybutton"
-        app:layout_constraintBottom_toTopOf="@id/playText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/playText"
+            android:layout_width="72dp"
+            android:layout_height="26dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/playText"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/buttonPlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/levelNumberHome" />
 
-    <TextView
-        android:id="@+id/playText"
-        android:layout_width="72dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="352dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/playText"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/buttonPlay"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:background="@drawable/playsymbol"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playText"
+            app:layout_constraintVertical_bias="0" />
 
-    <TextView
-        android:id="@+id/levelNumberHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/levelNumberHome"
-        android:textColor="@color/design_default_color_on_secondary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryHome" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/categoryHome"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/categoryHome"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
 
-    <Button
-        android:id="@+id/buttonEmergencyMessage"
-        android:layout_width="110dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="544dp"
-        android:background="@color/design_default_color_error"
-        android:text="@string/EmergencyMessage"
-        android:textColor="@color/design_default_color_background"
-        app:layout_constraintEnd_toStartOf="@id/iAmSafe"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/buttonProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/design_default_color_error"
+            android:text="Emergency Plan"
+            android:textColor="@color/design_default_color_background"
+            app:layout_constraintEnd_toStartOf="@+id/buttonEmergencyMessage"
+            app:layout_constraintHorizontal_bias="0.618"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonLevels"/>
 
-    <Button
-        android:id="@+id/iAmSafe"
-        android:layout_width="110dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="544dp"
-        android:background="@color/design_default_color_error"
-        android:text="@string/iAmSafe"
-        android:textColor="@color/design_default_color_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonEmergencyMessage"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/buttonEmergencyMessage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/design_default_color_error"
+            android:text="@string/EmergencyMessage"
+            android:textColor="@color/design_default_color_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonProfile"
+            app:layout_constraintBottom_toTopOf="@id/iAmSafe"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/buttonLevels"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/design_default_color_error"
+            android:text="@string/levelsButton"
+            android:textColor="@color/design_default_color_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iAmSafe"
+            app:layout_constraintHorizontal_bias="0.582"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonProfile"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/iAmSafe"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/design_default_color_error"
+            android:text="@string/iAmSafe"
+            android:textColor="@color/design_default_color_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonLevels"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEmergencyMessage"
+            app:layout_constraintVertical_bias="0.397" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

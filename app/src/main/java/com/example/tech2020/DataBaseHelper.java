@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.SQLException;
 import android.util.Log;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
@@ -21,12 +24,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_8="Con1Number";
     public static final String COL_9="Con2Name";
     public static final String COL_10="Con2Number";
-    public static final String COL_11="CommunicationPlan";
-    public static final String COL_12="InTownMeetingPlace";
-    public static final String COL_13="OutTownMeetingPlace";
-    public static final String COL_14="EvacuationPlan";
-
-
     public DataBaseHelper(Context context)
     {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -46,11 +43,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 COL_7 + " TEXT, " +
                 COL_8 + " TEXT, " +
                 COL_9 + " TEXT, " +
-                COL_10+ " TEXT, " +
-                COL_11+ " TEXT, " +
-                COL_12+ " TEXT, " +
-                COL_13+ " TEXT, " +
-                COL_14+ " TEXT " + ")";
+                COL_10 + " TEXT " + ")";
 
         Log.i("Insert", "create table");
         try {

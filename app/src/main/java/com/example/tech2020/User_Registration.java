@@ -40,7 +40,6 @@ public class User_Registration extends Fragment {
             public void onClick(View view) {
                 openHelper = new DataBaseHelper(getActivity().getApplicationContext());
                 db = openHelper.getWritableDatabase();
-
                 long InsertID = insertdata(txtname.getText().toString(), txtuser.getText().toString(), txtpass.getText().toString(), txtemail.getText().toString(), txtphonenumber.getText().toString(), c1name.getText().toString(), c1no.getText().toString(), c2name.getText().toString(), c2no.getText().toString());
                 if (InsertID <= 0)
                     Toast.makeText(getActivity().getApplicationContext(), "Registration was unsuccessful", Toast.LENGTH_LONG).show();

@@ -22,20 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
         <activity android:name=".COVID19"/>
         <activity android:name=".Info"/>
         <activity android:name=".StreetDisastersShooting"/>
         <activity android:name=".Earthquake"/>
         <activity android:name=".Reward"/>
-        <activity android:name=".Home"
-        android:label="Auxillium"/>
+        <activity android:name=".Home" android:label="Auxillium"/>
         <activity android:name=".View_Profile" />
         <activity android:name=".User_Registration" />
+        <activity android:name=".CategoryActivity" />
     </application>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
-    </uses-permission>
-    <uses-permission android:name="android.permission.SEND_SMS">
-    </uses-permission>
 
 </manifest>
