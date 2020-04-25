@@ -97,8 +97,6 @@ public class View_Profile extends AppCompatActivity {
 
 
     public void viewEmergencyPlan(){
-
-
         c1name = (EditText) findViewById(R.id.name);
         c1no = (EditText) findViewById(R.id.no);
         c2name = (EditText) findViewById(R.id.name1);

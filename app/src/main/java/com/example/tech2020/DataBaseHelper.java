@@ -9,7 +9,7 @@ import android.util.Log;
 public class DataBaseHelper extends SQLiteOpenHelper {
     SQLiteDatabase db;
     public static final String DATABASE_NAME="eusers.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     public static final String TABLE_NAME="T_Register";
     public static final String COL_1="ID";
     public static final String COL_2="Name";
@@ -63,8 +63,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-//        db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME); //Drop older table if exists
-//        onCreate(db);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME); //Drop older table if exists
+        onCreate(db);
     }
 
 }
