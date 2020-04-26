@@ -7,18 +7,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import androidx.fragment.app.Fragment;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Objects;
+import androidx.fragment.app.Fragment;
 
 public class CategoryFragment extends Fragment {
 
     private static int[] categoryImages = {
             R.drawable.public_disasters,
-            R.drawable.school_disasters,
+            R.drawable.category_naturaldisasters,
             R.drawable.medical_disasters_locked,
             R.drawable.car_disasters_locked,
             R.drawable.water_disasters_locked
@@ -26,28 +24,28 @@ public class CategoryFragment extends Fragment {
 
     private String categoryText[] = {
             "Public Disasters",
-            "School Disasters",
+            "Natural Disasters",
             "Medical Disasters",
             "Car Disasters",
             "Water Disasters"};
 
     private static int[][] levelImageArrays = {
            {
-                    R.drawable.level_11,
-                    R.drawable.level_12,
-                    R.drawable.level_13,
-                    R.drawable.level_14
+                    R.drawable.shooting_publicdisasters,
+                    R.drawable.kidnapping_publicdisasters,
+                    R.drawable.robbery_publicdisasters,
+                    R.drawable.carcrash_publicdisasters
             },
             {
-                    R.drawable.level_21,
-                    R.drawable.level_22,
-                    R.drawable.level_23,
-                    R.drawable.level_24
+                    R.drawable.earthquake_naturaldisasters,
+                    R.drawable.wildfire_naturaldisasters,
+                    R.drawable.flood_naturaldisasters,
+                    R.drawable.tornado_naturaldisasters
             },
-            {       R.drawable.level_31,
-                    R.drawable.level_32,
-                    R.drawable.level_33,
-                    R.drawable.level_34
+            {       R.drawable.heartattack_medicaldisaster,
+                    R.drawable.stroke_medicaldisaster,
+                    R.drawable.fainting_medicaldisaster,
+                    R.drawable.allergey_medicaldisaster
             },
             {
                     R.drawable.level_41,

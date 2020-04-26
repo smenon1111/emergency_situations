@@ -18,7 +18,7 @@
         android:background="#000000"
         android:textAlignment="gravity"
         android:gravity="center|bottom"
-        android:textColor="#FFEB3B"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"></TextView>
     <LinearLayout
@@ -31,32 +31,32 @@
 
         <ImageView
             android:id="@+id/level1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="140dp"
             android:layout_weight="0.25"
             android:padding="2px"
             android:scaleType="fitXY"/>
 
         <ImageView
             android:id="@+id/level2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="140dp"
             android:layout_weight="0.25"
             android:padding="2px"
             android:scaleType="fitXY"/>
 
         <ImageView
             android:id="@+id/level3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="140dp"
             android:layout_weight="0.25"
             android:padding="2px"
             android:scaleType="fitXY"/>
 
         <ImageView
             android:id="@+id/level4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="140dp"
             android:layout_weight="0.25"
             android:padding="2px"
             android:scaleType="fitXY"/>

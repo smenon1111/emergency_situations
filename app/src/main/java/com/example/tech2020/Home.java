@@ -111,7 +111,7 @@ public class Home extends Fragment {
 
 
     public void openEmergencyPlan() {
-        Intent intent = new Intent(getActivity(), COVID19.class);
+        Intent intent = new Intent(getActivity(), View_Profile.class);
         startActivity(intent);
     }
 

@@ -4,15 +4,12 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.database.SQLException;
 import android.util.Log;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
     SQLiteDatabase db;
     public static final String DATABASE_NAME="eusers.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     public static final String TABLE_NAME="T_Register";
     public static final String COL_1="ID";
     public static final String COL_2="Name";
@@ -24,6 +21,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_8="Con1Number";
     public static final String COL_9="Con2Name";
     public static final String COL_10="Con2Number";
+    public static final String COL_11="CommunicationPlan";
+    public static final String COL_12="InTownMeetingPlace";
+    public static final String COL_13="OutOfTownMeetingPlace";
+    public static final String COL_14="EvacuationPlan";
     public DataBaseHelper(Context context)
     {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

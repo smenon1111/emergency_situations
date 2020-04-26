@@ -77,14 +77,11 @@
         android:id="@+id/emo"
         android:layout_width="213dp"
         android:layout_height="32dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:text="Emergency Contacts"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/no" />
 
@@ -95,6 +92,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
@@ -106,53 +104,58 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Phone Number"
+        android:inputType="phone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <EditText
         android:id="@+id/c1name"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Contact 1 Name"
+        android:hint="In-Town Contact Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emo" />
 
     <EditText
         android:id="@+id/c1no"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Contact 1 Phone Number"
+        android:inputType="phone"
+        android:hint="In-Town Contact Number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/c1name" />
 
     <EditText
         android:id="@+id/c2name"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Contact 2 Name"
+        android:hint="Out Of Town Contact Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/c1no" />
 
     <EditText
         android:id="@+id/c2no"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:inputType="phone"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Contact 2 Phone Number"
+        android:hint="Out Of Town Contact Number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/c2name" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
