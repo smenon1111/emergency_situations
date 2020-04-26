@@ -17,17 +17,16 @@ public class CategoryFragment extends Fragment {
     private static int[] categoryImages = {
             R.drawable.public_disasters,
             R.drawable.category_naturaldisasters,
-            R.drawable.medical_disasters_locked,
-            R.drawable.car_disasters_locked,
-            R.drawable.water_disasters_locked
+            R.drawable.medical_disasters,
+            R.drawable.home_disasters,
     };
 
     private String categoryText[] = {
             "Public Disasters",
             "Natural Disasters",
             "Medical Disasters",
-            "Car Disasters",
-            "Water Disasters"};
+            "Home Disasters",
+            };
 
     private static int[][] levelImageArrays = {
            {
@@ -42,22 +41,17 @@ public class CategoryFragment extends Fragment {
                     R.drawable.flood_naturaldisasters,
                     R.drawable.tornado_naturaldisasters
             },
-            {       R.drawable.heartattack_medicaldisaster,
+            {       R.drawable.medicaldisasters_covid,
+                    R.drawable.heartattack_medicaldisaster,
                     R.drawable.stroke_medicaldisaster,
                     R.drawable.fainting_medicaldisaster,
-                    R.drawable.allergey_medicaldisaster
+
             },
             {
-                    R.drawable.level_41,
-                    R.drawable.level_42,
-                    R.drawable.level_43,
-                    R.drawable.level_44
-            },
-            {
-                    R.drawable.level_51,
-                    R.drawable.level_52,
-                    R.drawable.level_53,
-                    R.drawable.level_54
+                    R.drawable.homedisasters__housefire,
+                    R.drawable.homedisasters_chemicalspill,
+                    R.drawable.homedisasters_robbery,
+                    R.drawable.homedisasters_treefalling
             }
     };
 
@@ -86,10 +80,19 @@ public class CategoryFragment extends Fragment {
                 if (pos == 0 && level == 0) {
                     Intent intent = new Intent(getActivity(), StreetDisastersShooting.class);
                     startActivity(intent);
-                } else {
+                }else if(pos == 1 && level==0){
+                    Intent intent = new Intent(getActivity(), Earthquake.class);
+                    startActivity(intent);
+
+                }else if(pos == 2 && level==0){
+                    Intent intent = new Intent(getActivity(), COVID19.class);
+                    startActivity(intent);
+
+                }else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-                    builder.setMessage(String.format("Category %s, level %s", categoryImages[pos], getString(drawableId)))
-                            .setTitle("This category+level is not available now");
+                    //builder.setMessage(String.format("Category %s, level %s", categoryImages[pos], getString(drawableId)))
+                    //        .setTitle("This category+level is not available now");
+                    builder.setMessage("This level is currently unavailable.");
                     builder.create().show();
                 }
             }
@@ -112,6 +115,7 @@ public class CategoryFragment extends Fragment {
         setImage(view, R.id.level2, position, 1);
         setImage(view, R.id.level3, position, 2);
         setImage(view, R.id.level4, position, 3);
+
 
         TextView levelText = view.findViewById(R.id.level_text);
         levelText.setText(String.format("Click level for %s", categoryText[position]));

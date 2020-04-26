@@ -222,7 +222,7 @@
         android:id="@+id/sendButton"
         android:layout_width="125dp"
         android:layout_height="47dp"
-        android:text="Send"
+        android:text="Share"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/saveButton"

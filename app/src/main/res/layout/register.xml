@@ -27,7 +27,6 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/Name"
         android:inputType="textPersonName"
@@ -75,7 +74,7 @@
 
     <TextView
         android:id="@+id/emo"
-        android:layout_width="213dp"
+        android:layout_width="250dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -127,7 +126,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="phone"
-        android:hint="In-Town Contact Number"
+        android:hint="In-Town Contact No"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/c1name" />
@@ -150,7 +149,7 @@
         android:inputType="phone"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Out Of Town Contact Number"
+        android:hint="Out Of Town Contact No"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/c2name" />

@@ -129,7 +129,7 @@ public class COVID19 extends AppCompatActivity {
                     //Correct Answer
                     mQuizIndex = 6;
                     questions [4]= "5." +  mSecondButton.getText().toString();
-                    correct_incorrect [4]= R.drawable.red_mark;
+                    correct_incorrect [4]= R.drawable.check_mark;
                     myScore = myScore + 10;
                     openRewardPage(questions, myScore, correct_incorrect);
 
@@ -213,7 +213,7 @@ public class COVID19 extends AppCompatActivity {
                     mFourthButton.setText(R.string.Q4_A4Covid19);
                     Toast coinsAdded = Toast.makeText(getApplicationContext(),"Correct Answer! +10 points", Toast.LENGTH_LONG);
                     coinsAdded.show();
-                    mQuizIndex = 2;
+                    mQuizIndex = 4;
                     myScore = myScore + 10;
                 } else if (mQuizIndex == 4) {
                     //Wrong Answer

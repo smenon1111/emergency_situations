@@ -25,8 +25,8 @@ public class StreetDisastersShooting extends AppCompatActivity {
 
 
 
-    String[] questions = new String[4];
-    int[] correct_incorrect = new int[4];
+    String[] questions = new String[5];
+    int[] correct_incorrect = new int[5];
 
 
 

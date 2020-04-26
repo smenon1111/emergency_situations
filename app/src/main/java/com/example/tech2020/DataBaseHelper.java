@@ -9,7 +9,7 @@ import android.util.Log;
 public class DataBaseHelper extends SQLiteOpenHelper {
     SQLiteDatabase db;
     public static final String DATABASE_NAME="eusers.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 5;
     public static final String TABLE_NAME="T_Register";
     public static final String COL_1="ID";
     public static final String COL_2="Name";
@@ -44,7 +44,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 COL_7 + " TEXT, " +
                 COL_8 + " TEXT, " +
                 COL_9 + " TEXT, " +
-                COL_10 + " TEXT " + ")";
+                COL_10 + " TEXT, " +
+                COL_11 + " TEXT, " +
+                COL_12 + " TEXT, " +
+                COL_13 + " TEXT, " +
+                COL_14 + " TEXT " +")";
 
         Log.i("Insert", "create table");
         try {

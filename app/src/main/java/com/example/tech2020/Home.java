@@ -116,7 +116,7 @@ public class Home extends Fragment {
     }
 
     public void openStreetDisastersShooting() {
-        Intent intent = new Intent(getActivity(), Earthquake.class);
+        Intent intent = new Intent(getActivity(), StreetDisastersShooting.class);
         startActivity(intent);
     }
 
