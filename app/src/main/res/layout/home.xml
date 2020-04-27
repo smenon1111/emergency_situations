@@ -71,22 +71,23 @@
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonLevels"
-        app:layout_constraintHorizontal_bias="0.027"
+
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonEmergencyMessage"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintVertical_bias="0.257" />
 
     <Button
         android:id="@+id/buttonEmergencyMessage"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:background="@color/design_default_color_error"
         android:text="@string/EmergencyMessage"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintEnd_toStartOf="@+id/iAmSafe"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playText" />
 
@@ -94,21 +95,22 @@
         android:id="@+id/buttonLevels"
         android:layout_width="130dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
         android:background="@color/design_default_color_error"
         android:text="@string/levelsButton"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iAmSafe" />
+        app:layout_constraintTop_toBottomOf="@+id/iAmSafe"
+        app:layout_constraintVertical_bias="0.268" />
 
     <Button
         android:id="@+id/iAmSafe"
         android:layout_width="130dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="36dp"
         android:background="@color/design_default_color_error"
         android:text="@string/iAmSafe"
         android:textColor="@color/design_default_color_background"

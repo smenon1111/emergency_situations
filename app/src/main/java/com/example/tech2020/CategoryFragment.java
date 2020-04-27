@@ -17,7 +17,7 @@ public class CategoryFragment extends Fragment {
     private static int[] categoryImages = {
             R.drawable.public_disasters,
             R.drawable.category_naturaldisasters,
-            R.drawable.medical_disasters,
+            R.drawable.medical_emergencies,
             R.drawable.home_disasters,
     };
 
